@@ -8,7 +8,7 @@
   <title>Document</title>
 </head>
 <body>
-  <h1 class="title">GSAP: método set()</h1>
+  <h1 class="title">GSAP: método to()</h1>
   <p>É um método que "seta" as configurações iniciais do elemento.</p>
   <section class="container">
     <div class="item"></div>
@@ -22,15 +22,9 @@
     
     const title = document.getElementById('title');
 
-    gsap.set(container, {
-      x: -50,
-      y: 0,
-      skewX: "-30deg"
-    });
-
-    gsap.set(title, {
-      color: "red",
-    });
+    gsap.to(container, .5 , {
+      y: 100,
+    })
   </script>
 </body>
 </html>
