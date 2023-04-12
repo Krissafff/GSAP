@@ -9,7 +9,7 @@
 </head>
 <body>
   <h1 class="title">GSAP: método to()</h1>
-  <p>É um método que "seta" as configurações iniciais do elemento.</p>
+  <p>É um método que "seta" as configurações finais do elemento.</p>
   <section class="container">
     <div class="item"></div>
     <div class="item"></div>
@@ -22,8 +22,10 @@
     
     const title = document.getElementById('title');
 
-    gsap.to(container, .5 , {
-      y: 100,
+    gsap.to(container, {
+      y: 200,
+      ease: "elastic.inOut(1,0.3)",
+      duration: 5
     })
   </script>
 </body>
