@@ -10,7 +10,7 @@
 <body>
 
   <section class="container">
-    <h1 id="title">GSAP: Timeline()</h1>
+    <h1 id="title">GSAP: Plugin ScrollTrigger: Start & End</h1>
   </section>
 
   <section class="container">
@@ -29,7 +29,12 @@
     gsap.to(".square", {
       x: 500,
       duration: 3,
-      scrollTrigger: ".square2"
+      scrollTrigger: {
+        trigger: '.square',
+        start: 'top 50%',
+        end: 'bottom 10%', 
+        markers: true
+      }
     })
 
   </script>
