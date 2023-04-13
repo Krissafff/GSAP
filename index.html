@@ -9,86 +9,30 @@
 </head>
 <body>
 
-  <h1 id="title">GSAP: Timeline()</h1>
-  <p> métodos de controle e TimeScale
-  </p>
+  <section class="container">
+    <h1 id="title">GSAP: Timeline()</h1>
+  </section>
 
   <section class="container">
-    <div class="item item1"></div>
-    <div class="item item2"></div>
-    <div class="item item3"></div>
+    <div class="square"></div>
+
+    <div class="square2"></div>
   </section>
 
-  <section class="container" style="height: auto;">
-    <a href="#" id="play">Play</a>
-    <a href="#" id="pause">Pause</a>
-    <a href="#" id="resume">Resume</a>
-    <a href="#" id="reverse">Reverse</a>
-    <a href="#" id="restart">Restart</a>
-  </section>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js  "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   
   <script>
-    const container = document.querySelector('.container');
-    const title = document.getElementById('title');
-    const items = document.querySelectorAll('.item');
-    const item1 = document.querySelector('.item1');
-    const item2 = document.querySelector('.item2');
-    const item3 = document.querySelector('.item3');
-    const p = document.querySelector('p');
 
-    const play = document.querySelector('#play')
-    const pause = document.querySelector('#pause')
-    const resume = document.querySelector('#resume')
-    const reverse = document.querySelector('#reverse')
-    const restart = document.querySelector('#restart')
-
-    var tl = gsap.timeline();
-
-    tl.from(title, 1, {
-      x: -500,
-      opacity: 0,
-      ease: "back.out(1.7)",
-    })
-
-    .from(p, 1,{
-      x: -500,
-      opacity: 0,
-      ease: "back.out(1.7)",
-    })
-
-    .from(container, 1,{
-      x: -500,
-      opacity: 0,
-      ease: "back.out(1.7)",
-    })
-
-    play.addEventListener('click', function(){
-      console.log('play')
-      tl.play();
-    })
-
-    pause.addEventListener('click', function(){
-      console.log('pause')
-      tl.pause();
-    })
-
-    resume.addEventListener('click', function(){
-      console.log('resume')
-      tl.resume();
-    })
-
-    reverse.addEventListener('click', function(){
-      console.log('revert')
-      tl.reverse();
-    })
-
-    restart.addEventListener('click', function(){
-      console.log('restart')
-      tl.restart();
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.to(".square", {
+      x: 500,
+      duration: 3,
+      scrollTrigger: ".square2"
     })
 
   </script>
+
 </body>
 </html>
