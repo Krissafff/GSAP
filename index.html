@@ -8,8 +8,8 @@
   <title>Document</title>
 </head>
 <body>
-  <h1 id="title">GSAP: método from()</h1>
-  <p>É um método que define as configurações iniciais do elemento.</p>
+  <h1 id="title">GSAP: método fromTo()</h1>
+  <p>Em um mesmo método vamos definir as caracteristicas do ponto inicial e do ponto final</p>
   <section class="container">
     <div class="item"></div>
     <div class="item"></div>
@@ -21,16 +21,16 @@
     const container = document.querySelector('.container');
     const title = document.getElementById('title');
 
-    gsap.from(container, {
-      y: 200,
-      ease: "elastic.inOut(1,0.3)",
-      duration: 5
-    })
+    gsap.fromTo(container, 3, {
+      //configurações iniciais do elemento
+      y: -100,
 
-    gsap.from(title, 5, {
-      scale: 0.3,
-      opacity: 0,
-    })
+    }, {
+      //configurações finais do elemento
+      y: 100,
+      ease: "bounce.inOut"
+    });
+
   </script>
 </body>
 </html>
