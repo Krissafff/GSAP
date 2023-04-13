@@ -35,10 +35,8 @@ body {
 
   margin: 5px;
 
-  background-color: #1a1a1a;
+  background-color: #1fff;
   border-radius: 10px;
-
-  transform: scale(0);
 }
 h1 {
   margin: 16px 0px;
@@ -47,4 +45,18 @@ h1 {
 p {
   color: #ccc;
   margin-bottom: 16px;
+}
+
+a {
+  display: block;
+  height: auto;
+  padding: 8px 16px;
+
+  text-decoration: none;
+
+  color: #0c0c0c;
+  border-radius: 5px;
+
+  margin: 10px;
+  background-color: #fff;
 }
