@@ -8,8 +8,9 @@
   <title>Document</title>
 </head>
 <body>
-  <h1 id="title">GSAP: Loops</h1>
-  <p>
+  <h1 id="title">GSAP: Funções, Eventos & Callbacks</h1>
+  <p> É a capacidade de entrelaçarmos eventos com funções.
+    Callbacks são eventos relacionados a timeline da animação.
   </p>
   <section class="container">
     <div class="item"></div>
@@ -23,15 +24,27 @@
     const title = document.getElementById('title');
     const items = document.querySelectorAll('.item');
 
+   //container.addEventListener("click", function(){
+     // gsap.to(items, {
+     //   backgroundColor: 'red',
+      //  rotate: '360deg',
+      //  duration: 2,
+      //  scale: 0.8
+     // });
+   // })
+
     gsap.fromTo(items, {
-      scale: 0,
+      scale: 0.3,
+      opacity: 1,
       rotate: '0deg',
     },{
       scale: 1,
-      rotate: '360deg',
+      opacity: 1,
+      rotate: '720deg',
       duration: 1,
-      repeat: -1,
-      yoyo: true
+      onStart: function(){
+        
+      }
     });
 
   </script>
